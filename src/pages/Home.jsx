@@ -1,4 +1,4 @@
-import ProdactCard from "../components/ProdactCard";
+import ProductCard from "../components/ProductCard";
 import { getProducts } from "../data/products";
 import { Link } from "react-router-dom";
 
@@ -14,7 +14,7 @@ export default function Home() {
                 <h2 className="page-title">Gold wedding rings</h2>
                 <div className="product-grid">
                     {products.map((product) => (
-                       <ProdactCard product={product} key={product.id}/>
+                       <ProductCard product={product} key={product.id}/>
                     ))}
                 </div>
 
