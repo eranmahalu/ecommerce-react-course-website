@@ -6,10 +6,12 @@ import ProductDetails from "./pages/ProductDetails";
 import Navbar from "./components/Navbar";
 import AuthProvider from "./context/AuthContext";
 import "./App.css";
+import CartProvider from "./context/CartContext";
 
 function App() {
   return (
     <AuthProvider>
+      <CartProvider>
       <div className="app">
         <Navbar />
 
@@ -21,6 +23,7 @@ function App() {
           <Route path="*" element={<h1>Page not found</h1>} />
         </Routes>
       </div>
+      </CartProvider>
     </AuthProvider>
   );
 }
