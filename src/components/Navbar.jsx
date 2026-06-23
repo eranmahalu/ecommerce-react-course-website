@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import logo from "../assets/100px-logo.jpg";
 import { useAuth } from "../context/AuthContext";
 
 
@@ -8,11 +8,12 @@ export default function Navbar(){
         return(
     <nav className="navbar">
         <div className="navbar-container">
-            <Link to="/" className="navbar-brand">
-            NoaFineJewelry
-            </Link>
+           <Link to="/" className="navbar-brand">
+  <img src={logo} alt="Noa Fine Jewelry logo" className="navbar-logo" />
+</Link>
             <div className="navbar-links">
                 <Link to="/" className="navbar-link">Home</Link>
+                 <Link to="/about" className="navbar-link">About</Link>
                 <Link to="/checkout" className="navbar-link">Cart</Link>
             </div>
             <div className="navbar-auth">
